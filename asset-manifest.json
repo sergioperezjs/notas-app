@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/ensayo-app/static/css/main.1e4502c8.css",
+    "main.js": "/ensayo-app/static/js/main.7cb1efa1.js",
+    "index.html": "/ensayo-app/index.html",
+    "main.1e4502c8.css.map": "/ensayo-app/static/css/main.1e4502c8.css.map",
+    "main.7cb1efa1.js.map": "/ensayo-app/static/js/main.7cb1efa1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1e4502c8.css",
+    "static/js/main.7cb1efa1.js"
+  ]
+}
