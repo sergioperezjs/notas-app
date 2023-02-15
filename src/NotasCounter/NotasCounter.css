@@ -4,3 +4,6 @@
   margin: 0;
   padding: 50px
 }
+.NotasCounter--loading {
+  opacity: 25%;
+}

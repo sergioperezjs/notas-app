@@ -1,20 +1,13 @@
 import React from 'react';
-import { NotasCotext } from '../NotasContext';
 import './NotasForm.css';
 
-function NotasForm() {
+function NotasForm({ addNotas,setOpenModal }) {
   const [newNotasValue, setNewNotasValue] = React.useState('');
-  const {
-    addNotas,
-    setOpenModal,
-  } = React.useContext(NotasCotext);
   
-
   const onChange = (event) => {
     setNewNotasValue(event.target.value);
   };
   
-
   const onCancel = () => {
     setOpenModal(false);
   };

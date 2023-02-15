@@ -22,3 +22,7 @@
 .NotasSearch:focus {
   outline-color: #ece40c;
 }
+
+.NotasSearch:disabled {
+  opacity: 30%;
+}

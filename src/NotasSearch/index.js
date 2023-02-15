@@ -1,10 +1,7 @@
 import React from 'react';
-import { NotasCotext } from '../NotasContext';
 import './NotasSearch.css';
 
-function NotasSearch() {
-  const {searchValue, setSearchValue} = React.useContext(NotasCotext)
-
+function NotasSearch({searchValue, setSearchValue, loading}) {
     const onSearchValueChange = (event) =>{
         console.log(event.target.value);
         setSearchValue(event.target.value);
@@ -16,6 +13,7 @@ function NotasSearch() {
         placeholder="tareas" 
         value={searchValue}
         onChange={onSearchValueChange}
+        disabled={loading}
       />
     );
 }

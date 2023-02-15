@@ -1,12 +1,11 @@
 import React from 'react';
 import { useLocalStorage } from './useLocalStorage';
 
-const NotasCotext = React.createContext();
-
-function NotasProvider(props){
+function useNotas(){
     const {
         item: notas,
         saveItem: saveNotas,
+        sincronizeItem: sincronizeNotas,
         loading,
         error,
       } = useLocalStorage('Notas.V1', []);
@@ -51,8 +50,7 @@ function NotasProvider(props){
       saveNotas(newNotas);
      };
 
-    return(
-     <NotasCotext.Provider value={{
+    return {
         error,
         loading,
         totalNotas,
@@ -65,10 +63,8 @@ function NotasProvider(props){
         deleteNota,
         openModal,
         setOpenModal,
-     }}>
-        {props.children}
-     </NotasCotext.Provider>
-   );
+        sincronizeNotas,
+     };
 }
 
-export {NotasCotext, NotasProvider};
+export { useNotas };
